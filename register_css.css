@@ -1,0 +1,65 @@
+* {
+    margin: 0
+  }
+
+  h1{
+    border: 3px solid skyblue;
+    border-radius: 50px 10px 50px 10px;
+    padding: 5px 20px 5px 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("nature.jpg");
+  }
+  
+  .container h1 {
+    color: rgb(96, 27, 225);
+    font-family: sans-serif;
+    margin: 20px;
+  }
+  
+  .registartion-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    color: rgb(247, 248, 246);
+    border-radius: 10px 90px 10px 70px;
+    border: 3px solid skyblue;
+    font-size: 18px;
+    font-family: sans-serif;
+/*     background-color: #8ab9d0; */
+    padding: 20px;
+  }
+  
+  .registartion-form input,
+  .registartion-form select,
+  .registartion-form textarea {
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    font-family: sans-serif;
+  }
+  
+  .registartion-form input:focus,
+  .registartion-form textarea:focus {
+    box-shadow: 3px 3px 10px rgb(19, 192, 94), -3px -3px 10px rgb(224, 224, 224);
+  }
+  
+  .registartion-form .submit {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 20px;
+    color: rgb(44, 44, 44);
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .registartion-form .submit:hover {
+    box-shadow: 3px 3px 6px rgb(255, 214, 176);
+  }

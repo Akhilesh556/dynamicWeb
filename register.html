@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registerform</title>
+  <link rel="stylesheet" href="register_css.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Registration </h1>
+    <form method="get" name="myform" class="registartion-form" onsubmit="return validate()">
+      <table>
+        <tr>
+          <td><label>Name:</label></td>
+          <td><input type="text" name="fname" placeholder="your name"></td>
+        </tr>
+        <tr>
+          <td><label>Email:</label></td>
+          <td><input type="text" name="email" placeholder="your email"></td>
+        </tr>
+        <tr>
+          <td><label>Password:</label></td>
+          <td><input type="password" name="pass" placeholder="your password"></td>
+        </tr>
+        <tr>
+          <td><label>Phone Number:</label></td>
+          <td><input type="number" name="phone"></td>
+        </tr>
+        <tr>
+          <td><label>Gender:</label></td>
+          <td>Male <input type="radio" name="gender" value="male">
+            Female <input type="radio" name="gender" value="female">
+            Other <input type="radio" name="gender" value="other"></td>
+        </tr>
+        <tr>
+          <td><label>language</label></td>
+          <td>
+            <select name="language">
+              <option selected value="-1">Select language</option>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Arabic">Arabic</option>
+              <option value="Russian">Russian</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Zip Code:</label></td>
+          <td><input type="number" name="zip"></td>
+        </tr>
+        <tr>
+          <td><label>About:</label></td>
+          <td><textarea name="about" placeholder="Write about yourself..."></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><a href="testing.html"><input type="submit" class="submit" value="Register"></a></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <script type="text/javascript">
+
+    function validate() {
+      var first = document.forms["myform"]["fname"].value;
+      var email = document.forms["myform"]["email"].value;
+      var phone = document.forms["myform"]["phone"].value;
+      var pass = document.forms["myform"]["pass"].value;
+      var check = document.forms["myform"]["language"].value;
+      var zip = document.forms["myform"]["zip"].value;
+
+
+      if (first == "") {
+        alert("enetr a first name");
+        return false;
+      }
+      if (!isNaN(first)) {
+        alert("name should be in character")
+        return false;
+      }
+
+      var at = email.indexOf("@");
+      var dot = email.lastIndexOf(".");
+      if (at < 1 || dot < at + 2 || dot + 2 >= email.length) {
+        alert("not a valid email");
+        return false;
+      }
+
+      if (phone == "") {
+        alert("enter a phone number");
+        return false;
+      }
+      if (isNaN(phone)) {
+
+        alert("phone number should  be 10 digit.");
+        return false;
+      }
+      if (phone.length != 10) {
+        alert("muts be 10 digit no.");
+        return false;
+      }
+
+      if (pass == "") {
+        alert("enter a your password");
+        return false;
+      }
+
+      if (check == -1) {
+        alert("select your language")
+      }
+
+      if (zip == "") {
+        alert("enter your a zipcode")
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
